@@ -1,12 +1,12 @@
 [![Licença](https://img.shields.io/badge/licença-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Shell](https://img.shields.io/badge/shell-bash-green.svg)](https://www.gnu.org/software/bash/)
-[![Estrelas](https://img.shields.io/github/stars/AndreBFarias/NitroKit.svg?style=social)](https://github.com/AndreBFarias/NitroKit/stargazers)
-[![Contribuições](https://img.shields.io/badge/contribuições-bem--vindas-brightgreen.svg)](https://github.com/AndreBFarias/NitroKit/issues)
+[![Estrelas](https://img.shields.io/github/stars/AndreBFarias/Pop-OS-Nitro-5-Linux-Utilitarios.svg?style=social)](https://github.com/AndreBFarias/Pop-OS-Nitro-5-Linux-Utilitarios/stargazers)
+[![Contribuições](https://img.shields.io/badge/contribuições-bem--vindas-brightgreen.svg)](https://github.com/AndreBFarias/Pop-OS-Nitro-5-Linux-Utilitarios/issues)
 
-# NitroKit
+# Pop-OS-Nitro-5-Linux-Utilitarios
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/AndreBFarias/NitroKit/main/assets/acer-nitro.png" alt="Logo Acer Nitro" width="22%">
+    <img src="https://raw.githubusercontent.com/AndreBFarias/Pop-OS-Nitro-5-Linux-Utilitarios/main/assets/acer-nitro.png" alt="Logo Acer Nitro" width="22%">
 </p>
 
 <br>
@@ -114,7 +114,7 @@ Link: [src/>ritual_de_harmonia.sh](src/ritual_de_harmonia.sh)
 
 >Script para unificar a aparência do Pop!_OS (impedir intriga entre programas Nativos e Flatpak) e resolver conflitos de atalho para aplicativos como Ulauncher.
 > ### `instalador_zsh.sh`
-Link: [src/instalador_zsh.sh](https://github.com/AndreBFarias/NitroKit/blob/main/src/instalador_zsh.sh)
+Link: [src/instalador_zsh.sh](https://github.com/AndreBFarias/Pop-OS-Nitro-5-Linux-Utilitarios/blob/main/src/instalador_zsh.sh)
 
 > Este é o feitiço que transforma o terminal do sistema, substituindo o Bash pelo Zsh e instalando um ambiente completo e esteticamente aprimorado com tema `agnoster`, auto-sugestões e navegação inteligente. Ele configura tudo automaticamente.
 
