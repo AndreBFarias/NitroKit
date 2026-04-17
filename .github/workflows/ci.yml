@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  shellcheck:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Rodar shellcheck (warnings nao-fatal)
+        run: |
+          shellcheck --severity=error src/*.sh
+
+  bats:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar bats-core
+        run: sudo apt-get update && sudo apt-get install -y bats python3
+
+      - name: Rodar testes bats
+        run: bats tests/test_scripts.bats
