@@ -11,7 +11,7 @@
 # @docs #1: Este bloco de código garante que o sistema tenha o Zsh,
 # Git e Wget instalados. O fastfetch é o programa que exibe informações
 # do sistema na inicialização do terminal.
-echo "✨ Iniciando o ritual de instalação..."
+echo "--> Iniciando o ritual de instalação..."
 echo "--> Verificando e instalando dependências essenciais: zsh, git, wget, fastfetch..."
 sudo apt update
 sudo apt install zsh git wget fastfetch -y
@@ -236,12 +236,12 @@ atualizar_documentacao() {
     local DOC_DIR="\$HOME/Controle de Bordo/Documentação/"
     local DEV_DIR="\$HOME/Desenvolvimento/"
 
-    echo "✨ Iniciando o Pacto do Espelho Bidirecional..."
+    echo "==> Iniciando o Pacto do Espelho Bidirecional..."
     echo "--------------------------------------------------------"
 
     mkdir -p "\$DOC_DIR"
     mkdir -p "\$DEV_DIR"
-    
+
     # A lista de exclusão agora é uma lista precisa de demônios conhecidos.
     local EXCLUDE_RULES=(
       # Padrões de ambientes virtuais
@@ -249,21 +249,21 @@ atualizar_documentacao() {
       --exclude '.venv/'
       --exclude 'des/'
       --exclude '.pipelines/'
-      
+
       # Padrões de cache e versionamento
       --exclude '__pycache__/'
       --exclude '.git/'
-      
+
       # Pastas de projetos específicos que contêm binários ou dados pesados
       --exclude 'alma/'        # Contém modelos de voz da Luna
       --exclude 'ferramentas/' # Contém binários da Luna
-      
+
       # Pastas de projetos inteiros ou de configuração que não devem ser espelhadas
       --exclude 'pipelines-main/'
       --exclude 'Temas/'
       --exclude 'Configurações/'
     )
-    
+
     echo "--> Etapa 1: Sincronizando Oficina -> Cofre..."
     rsync -avhu --prune-empty-dirs "\${EXCLUDE_RULES[@]}" "\$DEV_DIR" "\$DOC_DIR"
 
@@ -271,7 +271,7 @@ atualizar_documentacao() {
     rsync -avhu --prune-empty-dirs "\${EXCLUDE_RULES[@]}" "\$DOC_DIR" "\$DEV_DIR"
 
     echo "--------------------------------------------------------"
-    echo "✨ Pacto concluído. Os planos se refletem, a verdade mais recente prevalece."
+    echo "==> Pacto concluido. Os planos se refletem, a verdade mais recente prevalece."
 }
 
 # --- 4. Inicialização de Ferramentas e Configurações de Sistema ---
@@ -287,10 +287,10 @@ fi
 
 # Exibir status da GPU (NVIDIA)
 if command -v nvidia-smi >/dev/null 2>&1; then
-  echo "🖥️   NVIDIA GPU Ativa:"
+  echo "[GPU] NVIDIA ativa:"
   nvidia-smi --query-gpu=name,driver_version,temperature.gpu --format=csv,noheader
 else
-  echo "🖥️   GPU NVIDIA não ativa ou não instalada."
+  echo "[GPU] NVIDIA nao ativa ou nao instalada."
 fi
 
 # Configurações de PATH do sistema
@@ -309,6 +309,7 @@ export NVM_DIR="\$HOME/.nvm"
 if [ -f ~/.zsh_secrets ]; then
     . ~/.zsh_secrets
 fi
+EOF
 
 # --- 5. Configuração da Paleta de Cores do Terminal ---
 # @docs #5: Este comando usa o gsettings para definir a paleta de cores do
@@ -328,7 +329,7 @@ chsh -s $(which zsh)
 # --- 7. Finalizando o Ritual ---
 # @docs #5: Instruções finais para que o novo reino se manifeste em toda a sua glória.
 echo "----------------------------------------"
-echo "✨ Ritual concluído. O novo reino está pronto."
+echo "--> Ritual concluido. O novo reino esta pronto."
 echo "Por favor, feche e reabra o terminal para que as alterações tenham efeito."
 echo "Em seguida, ajuste a fonte para 'FiraCode Nerd Font' nas preferências do GNOME Terminal para a estética completa."
 
